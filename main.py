@@ -180,5 +180,5 @@ btnExit = Button(f1, padx=16, pady=8, bd=16,
                  command=qExit).grid(row=7, column=3)
 
 
-# keeps window alive
+
 root.mainloop()
