@@ -34,7 +34,7 @@ root.configure(bg="black")
 
 lblInfo = Label(Tops, font=('helvetica', 50, 'bold'),
                 text="MY Secret Tool \n By Satyam Sharma",
-                fg="Black", bd=10, anchor='w' , bg="grey" )
+                fg="Black", bd=10, anchor='w' , bg="white" )
 
 lblInfo.grid(row=0, column=0)
 
@@ -56,7 +56,7 @@ lblMsg.grid(row=1, column=0)
 # Entry box for the message
 txtMsg = Entry(f1, font=('arial', 16, 'bold'),
                textvariable=Msg, bd=10, insertwidth=4,
-               bg="powder blue", justify='right')
+               fg ="white",bg="black", justify='right')
 
 
 txtMsg.grid(row=1, column=1)
@@ -70,7 +70,7 @@ lblkey.grid(row=2, column=0)
 # Entry box for the key
 txtkey = Entry(f1, font=('arial', 16, 'bold'),
                textvariable=key, bd=10, insertwidth=4,
-               bg="powder blue", justify='right')
+               fg = "white" , bg="Black", justify='right')
 
 txtkey.grid(row=2, column=1)
 
@@ -83,7 +83,7 @@ lblmode.grid(row=3, column=0)
 # Entry box for the mode
 txtmode = Entry(f1, font=('arial', 16, 'bold'),
                 textvariable=mode, bd=10, insertwidth=4,
-                bg="powder blue", justify='right')
+               fg = "white" ,bg="Black", justify='right')
 
 txtmode.grid(row=3, column=1)
 
@@ -96,11 +96,11 @@ lblResult.grid(row=2, column=2)
 # Entry box for the result
 txtResult = Entry(f1, font=('arial', 16, 'bold'),
                   textvariable=Result, bd=10, insertwidth=4,
-                  bg="powder blue", justify='right')
+                  fg = "white", bg="black", justify='right')
 
 txtResult.grid(row=2, column=3)
 
-# Vigenère cipher
+# Encrypting and Decrypting function
 
 # Function to encode
 
@@ -164,13 +164,13 @@ def Reset():
 # Show message button
 btnTotal = Button(f1, padx=16, pady=8, bd=16, fg="black",
                   font=('arial', 16, 'bold'), width=10,
-                  text="Show Message", bg="powder blue",
+                  text="Show Message", bg="green",
                   command=Results).grid(row=7, column=1)
 
 # Reset button
 btnReset = Button(f1, padx=16, pady=8, bd=16,
                   fg="black", font=('arial', 16, 'bold'),
-                  width=10, text="Reset", bg="green",
+                  width=10, text="Reset", bg="blue",
                   command=Reset).grid(row=7, column=2)
 
 # Exit button
@@ -180,5 +180,5 @@ btnExit = Button(f1, padx=16, pady=8, bd=16,
                  command=qExit).grid(row=7, column=3)
 
 
-
+# keeps window alive
 root.mainloop()
